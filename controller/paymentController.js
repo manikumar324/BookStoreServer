@@ -3,6 +3,7 @@ const nodemailer = require("nodemailer");
 const ejs = require("ejs");
 const path = require("path");
 const Order = require("../model/orderModel");
+const Bookmodel = require("../model/bookModel")
 
 const renderTemplate = (templatePath, data) => {
   return new Promise((resolve, reject) => {
