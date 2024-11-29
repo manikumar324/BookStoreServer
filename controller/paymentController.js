@@ -66,8 +66,8 @@ exports.initiatePayment = async (req, res) => {
       port: 587,
       secure: false,
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.Email_User,
+        pass: process.env.Email_Pass,
       },
       tls: {
         rejectUnauthorized: false,
@@ -81,7 +81,7 @@ exports.initiatePayment = async (req, res) => {
 
    
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: process.env.Email_User,
       to: email,
       subject: "Your Order Confirmation",
       html: htmlContent,
